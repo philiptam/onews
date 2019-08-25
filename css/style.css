@@ -15,14 +15,16 @@ html, body {
 .content {
     width: 100%;
     height: 100%;
-    position: relative;
 }
 
 .navHeader {
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 60px;
     background-color: #fff;
+    z-index: 10;
 }
 
 .navHeader .logo{
@@ -119,6 +121,7 @@ html, body {
     width: 624px;
     padding: 30px 60px;
     margin-top: 140px;
+    letter-spacing:2px;
 }
 
 .page1 .text h3 {
@@ -169,15 +172,16 @@ html, body {
 
 
 .page3 {
-    margin-top: 20px;
-    background-color: rgba(214, 255, 217, 0.38);
+    margin-top: 80px;
+    background-color: rgb(249, 249, 248);
 }
 
 .page3 .text {
     float: right;
     width: 624px;
     padding: 30px 60px;
-    margin-top: 200px;
+    margin-top: 100px;
+    letter-spacing:2px;
 }
 
 .page3 .text h3 {
@@ -195,6 +199,70 @@ html, body {
     float: left;
     width: 400px;
 }
+
+.page4{
+    margin-top: 120px;
+    height: 600px;
+    background-color: #f8f6f3;
+}
+
+.page4>div{
+    position: relative;
+}
+
+.page4 .img{
+    position: absolute;
+    left: 0;
+    top: -60px;
+    width: 400px;
+
+}
+
+.page4 .img img{
+    width: 100%;
+}
+
+.page4 .text ul{
+    float: right;
+    width: 550px;
+}
+
+.page4 .text ul li{
+    float: left;
+    width: 275px;
+    margin-top: 80px;
+    padding: 10px;
+}
+
+.page4 .text ul li div{
+    text-align: center;
+    font-size: 40px;
+}
+
+.page4 .text ul li p{
+    letter-spacing:2px;
+    line-height: 20px;
+}
+
+.page5{
+    margin-top: 60px;
+}
+
+.page5 h4{
+    text-align: center;
+}
+
+.page5 .swiper-container {
+    width: 100%;
+} 
+.page5 .img {
+    text-align: center;;
+}
+
+.page5 .img img{
+    width: 400px;
+}
+
 
 
 

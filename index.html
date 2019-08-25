@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
     <title>Title</title>
 </head>
 <body>
@@ -14,8 +15,8 @@
             <div class="logo"></div>
             <ul class="navList">
                 <li><a class="active" href="javascript:;">首页</a></li>
-                <li><a href="javascript:;">介绍</a></li>
                 <li><a href="javascript:;">功效</a></li>
+                <li><a href="javascript:;">介绍</a></li>
                 <li><a href="javascript:;">DIY</a></li>
                 <li><a href="javascript:;">视频</a></li>
                 <li><a href="javascript:;">购买</a></li>
@@ -50,16 +51,96 @@
             </div>
             <img src="./img/3.png" alt="">
         </div>
+        <div class="page page4">
+            <div class="w clearfix">
+                <div class="img">
+                    <img src="./img/page4.png" alt="">
+                </div>
+                <div class="text">
+                    <ul class="clearfix">
+                        <li>
+                            <div>1</div>
+                            <p>孕妇吃鱼鳞有充足钙质供应宝宝，宝宝出生皮肤白白嫩嫩</p>
+                        </li>
+                        <li>
+                            <div>2</div>
+                            <p>孕妇产后恢复非常好 o脂肪100%纯天然，肌肤恢复紧致，提子变回鲜嫩</p>
+                        </li>
+                        <li>
+                            <div>3</div>
+                            <p>清热解毒 去便秘肠道吸收好</p>
+                        </li>
+                        <li>
+                            <div>4</div>
+                            <p>非常明显有效淡化眼袋，淡化法令纹美白祛斑，去除痘痘。（男女不分）</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="page5 w">
+            <h4>不同吃法口味</h4>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="img">
+                            <img src="./img/lb1.jpg" alt="">
+                            <img src="./img/lb2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img">
+                            <img src="./img/lb3.jpg" alt="">
+                            <img src="./img/lb4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+
+            
+            </div>
+        </div>
     </div>
 </div>
 <script src="js/jquery-3.4.1.js"></script>
+<script src="js/swiper.min.js"></script>
 <script>
   $(function () {
+
+    var mySwiper = new Swiper ('.swiper-container', {
+    loop: true, // 循环模式选项
+    
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    autoplay:true,
+  })        
     // 导航栏点击事件
     var as = $('.navList a');
     as.click(function () {
       as.removeClass('active');
       $(this).addClass('active');
+      var index = as.index(this);
+      switch(index){
+          case 0:
+            $('html,body').animate({ scrollTop: 0 }, 500);
+            break;
+          case 1:
+            var top = $('.page1').offset().top;
+            $('html,body').animate({ scrollTop: top-60 }, 500);
+            break;
+          case 2:
+          var top = $('.page3').offset().top;
+            $('html,body').animate({ scrollTop: top-60 }, 500);
+            break;
+          case 3:
+            
+            break;
+          case 4:
+            break;
+      }
     });
 
   })
