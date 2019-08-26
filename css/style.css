@@ -27,7 +27,7 @@ html, body {
     z-index: 10;
 }
 
-.navHeader .logo{
+.navHeader .logo {
     width: 60px;
     height: 60px;
     float: left;
@@ -49,7 +49,7 @@ html, body {
     width: 100px;
 }
 
-.navHeader .navList > li:last-of-type a{
+.navHeader .navList > li:last-of-type a {
     color: orange;
 }
 
@@ -64,7 +64,7 @@ html, body {
     transition: all 0.2s;
 }
 
-.navHeader .navList > li > a:hover{
+.navHeader .navList > li > a:hover {
     color: #aaaaaa;
 }
 
@@ -104,15 +104,21 @@ html, body {
 }
 
 .textContent .vedio {
-    height: 200px;
     width: 100%;
     background-color: #cccccc;
 }
 
+.textContent .vedio video{
+    width: 100%;
+}
+
 
 .page1 {
-    margin-top: 80px;
+    width: 1425px;
     height: 500px;
+    margin: 0 auto;
+    margin-top: 80px;
+
     background-color: rgb(249, 249, 248);
 }
 
@@ -121,7 +127,7 @@ html, body {
     width: 624px;
     padding: 30px 60px;
     margin-top: 140px;
-    letter-spacing:2px;
+    letter-spacing: 2px;
 }
 
 .page1 .text h3 {
@@ -145,7 +151,7 @@ html, body {
     margin-top: 80px;
 }
 
-.page2 .line{
+.page2 .line {
     width: 100%;
     height: 155px;
     background-color: #f89e23;
@@ -155,7 +161,25 @@ html, body {
     width: 100%;
 }
 
-.page2 h3 {
+.page2 .text {
+    position: absolute;
+    padding: 20px;
+    top: 250px;
+    left: 160px;
+    width: 500px;
+    background-color: #ffffff;
+}
+
+.page2 .text h4 {
+    font-size: 20px;
+}
+
+.page2 .text p {
+    margin-top: 20px;
+    color: #000;
+}
+
+.page2 .line h3 {
     float: left;
     width: 400px;
     margin-top: 70px;
@@ -163,7 +187,7 @@ html, body {
     color: #ffffff;
 }
 
-.page2 p {
+.page2 .line p {
     float: right;
     margin-top: 45px;
     width: 380px;
@@ -181,7 +205,7 @@ html, body {
     width: 624px;
     padding: 30px 60px;
     margin-top: 100px;
-    letter-spacing:2px;
+    letter-spacing: 2px;
 }
 
 .page3 .text h3 {
@@ -200,17 +224,17 @@ html, body {
     width: 400px;
 }
 
-.page4{
+.page4 {
     margin-top: 120px;
     height: 600px;
     background-color: #f8f6f3;
 }
 
-.page4>div{
+.page4 > div {
     position: relative;
 }
 
-.page4 .img{
+.page4 .img {
     position: absolute;
     left: 0;
     top: -60px;
@@ -218,49 +242,63 @@ html, body {
 
 }
 
-.page4 .img img{
+.page4 .img img {
     width: 100%;
 }
 
-.page4 .text ul{
+.page4 .text ul {
     float: right;
     width: 550px;
 }
 
-.page4 .text ul li{
+.page4 .text ul li {
     float: left;
     width: 275px;
     margin-top: 80px;
     padding: 10px;
 }
 
-.page4 .text ul li div{
+.page4 .text ul li div {
     text-align: center;
     font-size: 40px;
+    color: orange;
 }
 
-.page4 .text ul li p{
-    letter-spacing:2px;
+.page4 .text ul li p {
+    letter-spacing: 2px;
     line-height: 20px;
 }
 
-.page5{
+.page5 {
     margin-top: 60px;
 }
 
-.page5 h4{
+.page5 h4 {
     text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
 .page5 .swiper-container {
     width: 100%;
-} 
+}
+
 .page5 .img {
     text-align: center;;
 }
 
-.page5 .img img{
+.page5 .img img {
     width: 400px;
+}
+
+.page6 {
+    margin-top: 60px;
+    text-align: center;
+    background-color: rgb(249, 249, 248);
+}
+
+.page6 img {
+    width: 260px;
 }
 
 
