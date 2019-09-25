@@ -16,8 +16,11 @@
     <title>蜜鳞鱼鳞冻</title>
 </head>
 <body>
-<div class="qrcode-phone">
-    <img src="./img/buy.jpg" alt="">
+<div class="qrcode-phone myhide">
+    <div class="imgcontent">
+        <img src="./img/buy.jpg" alt="">
+        <span class="closed">&#xe60d;</span>
+    </div>
 </div>
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -132,22 +135,39 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="./img/lb1.jpg" alt="">
+                    <div class="img">
+                        <img src="./img/lb1.jpg" alt="">
+                        <img src="./img/lb2.jpg" alt="">
+                    </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="./img/lb2.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./img/lb3.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./img/lb4.jpg" alt="">
+                    <div class="img">
+                        <img src="./img/lb3.jpg" alt="">
+                        <img src="./img/lb4.jpg" alt="">
+                    </div>
                 </div>
             </div>
             <!-- 如果需要分页器 -->
             <div class="swiper-pagination"></div>
         </div>
     </div>
+</div>
+<div class="container-fluid">
+    <div class="row page6">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 btncontent">
+            <div class="buybtn">立即购买</div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="qrcode">
+                <img src="./img/buy.jpg" alt="">
+                <span class="closed">&#xe60d;</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <span>www.cineme.xyz归版权©所有</span><br/>
+    <span>备案号：粤ICP备19109826号-1</span>
 </div>
 <script src="js/jquery-3.4.1.js"></script>
 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
@@ -163,15 +183,11 @@
         el: '.swiper-pagination',
       },
       autoplay: true,
-    });
-
-    $(".qrcode-phone").click(function (e) {
-
-      console.log('aa');
-      e.stopPropagation();
     })
 
-
+    $(".qrcode-phone").click(function (e) {
+      e.stopPropagation();
+    })
 
 
     var as = $('.navbar-nav a');
@@ -180,31 +196,59 @@
       $('.navbar-nav li').removeClass('active');
       li.addClass('active');
       var index = as.index(this);
-      // switch (index) {
-      //   case 0:
-      //     $('html,body').animate({scrollTop: 0}, 500);
-      //     break;
-      //   case 1:
-      //     var top = $('.page1').offset().top;
-      //     $('html,body').animate({scrollTop: top - 60}, 500);
-      //     break;
-      //   case 2:
-      //     var top = $('.page2').offset().top;
-      //     $('html,body').animate({scrollTop: top - 60}, 500);
-      //     break;
-      //   case 3:
-      //     var top = $('.page5').offset().top;
-      //     $('html,body').animate({scrollTop: top - 60}, 500);
-      //     break;
-      //   case 4:
-      //     $('html,body').animate({scrollTop: 0}, 500);
-      //     break;
-      //   case 5:
-      //     var top = $('.page6').offset().top;
-      //     $('html,body').animate({scrollTop: top - 60}, 500);
-      //     break;
-      // }
+      switch (index) {
+        case 0:
+          $('html,body').animate({scrollTop: 0}, 500);
+          break;
+        case 1:
+          var top = $('.page1').offset().top;
+          $('html,body').animate({scrollTop: top - 60}, 500);
+          break;
+        case 2:
+          var top = $('.page2').offset().top;
+          $('html,body').animate({scrollTop: top - 60}, 500);
+          break;
+        case 3:
+          var top = $('.page5').offset().top;
+          $('html,body').animate({scrollTop: top - 60}, 500);
+          break;
+        case 4:
+          $('html,body').animate({scrollTop: 0}, 500);
+          break;
+        case 5:
+          var top = $('.page6').offset().top;
+          $('html,body').animate({scrollTop: top - 60}, 500);
+          break;
+      }
     });
+
+
+    var width = $(window).width();
+
+
+    var flag = true;
+
+    $('.buybtn').click(function () {
+      if (width <= 767) {
+        $('.qrcode-phone').show();
+      } else {
+        $(this).parent('.btncontent').fadeOut(function () {
+          $('.qrcode').fadeIn();
+        });
+      }
+    });
+
+
+    $('.closed').click(function () {
+      if (width <= 767) {
+        $('.qrcode-phone').hide();
+      } else {
+        $(this).parent('.qrcode').fadeOut(function () {
+          $('.btncontent').fadeIn();
+        });
+      }
+
+    })
   })
 </script>
 </body>
